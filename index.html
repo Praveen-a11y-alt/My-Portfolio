@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Praveen T R | Java Full Stack Developer</title>
+  <style>
+    :root {
+      --bg: #f5f5f5;
+      --fg: #1e1e1e;
+      --accent: #0d47a1;
+      --card-bg: #ffffff;
+      --card-shadow: rgba(0, 0, 0, 0.1);
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg);
+      color: var(--fg);
+      transition: background 0.3s, color 0.3s;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: linear-gradient(135deg, #0d47a1, #1565c0);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    nav {
+      margin-top: 1rem;
+    }
+    nav a {
+      margin: 0 1rem;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.4rem 0.8rem;
+      border-radius: 20px;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+    section {
+      padding: 3rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      border-left: 6px solid var(--accent);
+      padding-left: 1rem;
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+    }
+    .skills, .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+    .badge, .project {
+      background: var(--card-bg);
+      border-radius: 12px;
+      box-shadow: 0 4px 8px var(--card-shadow);
+      padding: 1rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .badge:hover, .project:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 16px var(--card-shadow);
+    }
+    .badge {
+      text-align: center;
+      font-weight: 600;
+      color: var(--accent);
+      border: 2px solid var(--accent);
+      background: linear-gradient(45deg, #e3f2fd, #fff);
+    }
+    .project h3 {
+      margin-top: 0;
+      color: var(--accent);
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #0d47a1;
+      color: white;
+      font-size: 0.9rem;
+    }
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+      display: block;
+      margin-bottom: 0.5rem;
+      transition: color 0.2s;
+    }
+    .contact a:hover {
+      color: #1976d2;
+    }
+    .dark-mode {
+      --bg: #121212;
+      --fg: #e0e0e0;
+      --accent: #90caf9;
+      --card-bg: #1e1e1e;
+      --card-shadow: rgba(0, 0, 0, 0.4);
+    }
+    .toggle-btn {
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      background: #fff;
+      border: none;
+      border-radius: 20px;
+      padding: 0.4rem 0.8rem;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease;
+    }
+    .show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <button class="toggle-btn" onclick="toggleMode()">🌓</button>
+  <header>
+     <img src="./profile.jpg" alt="hh" style="width: 130px; height: 130px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.3); margin-bottom: 1rem;">
+   
+    <h1>Praveen T R</h1>
+    <p id="typing-text" style="font-size: 1.2rem; margin-top: 10px;"></p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#courses">Courses</a>
+      <a href="#certifications">Certificates</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about" class="reveal">
+    <h2>About Me</h2>
+    <p>Motivated software enthusiast with a solid foundation in programming and web development. Experienced in building simple applications, working with APIs, and backend processes. Passionate about learning new technologies and solving real-world problems through code. Strong team player with good communication skills.</p>
+    <p><strong>Education:</strong><br/>
+      B.E in Electronics and Communication Engineering, PESITM Shivamogga (CGPA: 7.7)<br/>
+      PUC - Hoysaleswara PU College (84.16%)<br/>
+      SSLC - Jnana Jyothi English High School (79.99%)</p>
+  </section>
+
+  <section id="skills" class="reveal">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="badge">Java</div>
+      <div class="badge">Spring Boot</div>
+      <div class="badge">MySQL</div>
+      <div class="badge">HTML</div>
+      <div class="badge">CSS</div>
+      <div class="badge">JavaScript</div>
+      <div class="badge">REST APIs</div>
+      <div class="badge">Git & GitHub</div>
+      <div class="badge">Problem Solving</div>
+      <div class="badge">Adaptability</div>
+      <div class="badge">Time Management</div>
+      <div class="badge">Communication</div>
+    </div>
+  </section>
+
+  <section id="projects" class="reveal">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>Movie Ticket Booking System</h3>
+        <p>Developed a web app for movie ticket reservation with user registration, movie listings, and time slot selection.</p>
+        <p><strong>Tech:</strong> HTML, CSS, JavaScript, MySQL</p>
+      </div>
+      <div class="project">
+        <h3>Facial Emotion Recognition</h3>
+        <p>Used deep learning with webcam input to detect real-time emotions (happy, sad, angry). Built with Python, OpenCV, Flask.</p>
+        <p><strong>Tech:</strong> Python, TensorFlow, Keras, Flask, OpenCV, HTML/CSS</p>
+      </div>
+      <div class="project">
+        <h3>Floating Point Multiplier</h3>
+        <p>Implemented a floating point multiplier using high performance adders/multipliers in Cadence Virtuoso.</p>
+        <p><strong>Tech:</strong> Cadence Virtuoso</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="courses" class="reveal">
+    <h2>Courses Completed</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>Java Full Stack Development</h3>
+        <p>Completed an intensive Java Full Stack Development course at <strong>JSpiders, Basavanagudi</strong>. Learned technologies including Java, Spring Boot, MySQL, HTML, CSS, JavaScript, and REST APIs. Worked on real-time projects and developed end-to-end applications with both front-end and back-end integrations.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="certifications" class="reveal">
+    <h2>Internship & Certification</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>Java Full Stack Development Internship</h3>
+        <p>Successfully completed an internship and earned certification in Java Full Stack Development. Gained hands-on experience in full lifecycle development including requirements analysis, design, development, testing, and deployment of Java-based web applications.</p>
+      </div>
+      <div class="project">
+  <h3>Python Programming - Udemy</h3>
+  <p>Completed a Python course on Udemy covering core programming concepts, object-oriented programming, and mini-projects. Built automation scripts and gained strong problem-solving experience.</p>
+</div>
+
+<div class="project">
+  <h3>Data Science Certificate - IBM</h3>
+  <p>Earned an IBM certificate for completing foundational training in data science including data analysis, data visualization, and machine learning using Jupyter, Pandas, and Scikit-learn.</p>
+</div>
+
+<div class="project">
+  <h3>Project Management - IBM</h3>
+  <p>Completed IBM’s Project Management certification. Learned about project lifecycle, planning, agile methodologies, and usage of tools like Trello, Jira, and Asana.</p>
+</div>
+
+    </div>
+  </section>
+
+  <section id="contact" class="reveal">
+    <h2>Contact</h2>
+    <div class="contact">
+      <a href="mailto:praveentr961@gmail.com">📧 praveentr961@gmail.com</a>
+      <a href="https://github.com/Praveen-a11y-alt" target="_blank">🐙 github.com/Praveen-a11y-alt</a>
+      <a href="https://linkedin.com/in/praveen-t-r-5aa048284" target="_blank">🔗 linkedin.com/in/praveen-t-r</a>
+      <p>📞 +91 8073851774</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Praveen T R • All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+
+    const text = "Java Full Stack Developer";
+    let i = 0;
+    function typeEffect() {
+      const target = document.getElementById("typing-text");
+      if (!target) return;
+      if (i < text.length) {
+        target.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeEffect, 100);
+      }
+    }
+
+    window.onload = function () {
+      typeEffect();
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+          }
+        });
+      });
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    }
+  </script>
+</body>
+</html>
